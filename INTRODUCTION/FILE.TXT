@@ -1,0 +1,41 @@
+java script allows object oriented programming by allowing following properties
+
+-classes
+-objects
+-constructor
+-prototypes
+-inheritance
+
+--class = buleprint 
+
+class student {
+
+}
+
+--object = which executes the information of blueprint 
+
+let studant1 = new student()
+
+--constructor = which is simpally a method, which executes automatically when an object is created of a class
+
+class student {
+
+    constructor(){
+        this.name: name;
+        this.age: age;
+        this.class: class;
+    }
+
+}
+
+let studant1 = new student() the constructor is called heare automatically
+
+--prototypes = a prototype is cleated of a clsass, the class object contain the prototypes is its shared memory 
+
+studant.prototype.study = function () {
+    console.log(`${this.name} his is average at avery thing but not good at any thing`)
+}
+
+syudant.study();
+
+--inheritance = 
