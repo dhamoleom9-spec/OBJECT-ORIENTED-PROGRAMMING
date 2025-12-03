@@ -39,3 +39,82 @@ studant.prototype.study = function () {
 syudant.study();
 
 --inheritance = 
+
+agar koi class hay aur usme kutch kutch likha hay agar ap inhi property ko dusre class mi chahiye to use apan inharit kar sakte hay
+class animal{
+    constructor(eat,sleep){
+        this.eat = eat;
+        this.sleep = sleep;
+    }
+}
+class dog extends animal{
+    constructor(sound){
+        super()
+        this.sound = sound;
+    }
+}
+let dog1 = new dog("bhau bhau.....")
+
+--class expression 
+storing a class in the veriable is called class expression
+
+let animal = class{
+    constructor(name,bread){
+        this.name = name;
+        this.bread = bread;
+    }
+}
+let ani1 = new animal("charli","germanshepherd")
+
+the hoisting is not working in the class expression 
+
+--we cancreate a constructor without class syntax like follows
+
+function User(name, email){
+    this.name = name;
+    this.email = email;
+}
+
+let user1 = new user("om dhamole","omdhamole123@gmail.com")
+user();
+
+--call
+call is a function with specific this value
+
+function callback(){
+    console.log(`${this.name} is intalligent main`)
+}
+
+let obj = {
+    name: "shubnam bhau bharsakde"
+}
+
+callback.call(obj)
+
+--apply
+apply is like the call, in which attributes are passed in form of array
+
+function applyee(a,b){
+    console.log(this.name, a + b)
+} 
+
+let objj = {
+    name: "om"
+}
+
+applyee.apply(objj, [2,3])
+
+--bind
+bind wwhich written new function eith fixed this valus
+function binddd(c , d){
+    console.log(this.name, this.email, c - d)
+}
+
+let objjj = {
+    name: " om dhamole",
+    email: "ombhau134@gmail.com"
+}
+
+const nava = binddd.bind(objjj, 2,3)
+nava()
+
