@@ -1,0 +1,50 @@
+inheritance => ek main class hay jiski hamne ek child class bana di, so aplyla tya main class chya properties tya child class madhe pn pahijet, so apan extends cha waper karun tya main class chya properties child class madhe anu shakto tyla inheritance mhantat
+
+class bird {
+    constructor(name){
+        this.name = name;
+    }
+
+    udte(){}
+    panipite(){}
+}
+
+class chimni extends birds{
+    constructor(eyes,legs){
+        this.eyes = eyes;
+        this.legs = legs;
+    }
+
+    baste(){}
+    hagte(){}
+}
+
+let main = new bird("chimni")
+
+lwe c1 = new chimni(2,2) --- so, it gate the animal properties in their prototypes
+
+
+Getter => is used to gate the any property of an constructor 
+
+Setter => used to set the any property of an construcrot 
+set ek value ghate je aka condition madhun jate nantarach te set hote 
+
+class human {
+    constructor(){
+        this._age = 21;
+    }
+
+    set age(val){
+        if(val < 0){
+            console.error("error alay madarchode........")
+        }
+        this._age = val;
+    }
+
+    get age(){
+        return this._age
+    }
+}
+
+let h1 = nwe human();
+h1.age = 25;
