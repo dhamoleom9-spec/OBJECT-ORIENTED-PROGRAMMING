@@ -1,10 +1,67 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html,
-body{
+body {
     height: 100%;
     width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@mixin flex($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(128, 126, 126), black);
+    @include flex(2rem);
+
+
+    section.one {
+        height: 45%;
+        width: 60%;
+        background-color: chocolate;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 1rem rgb(145, 144, 144);
+        @include flex(1rem);
+
+        .flex{
+            @include flex(0.2rem);
+            pointer-events: none;
+
+            h1{
+                font-size: 17px;
+                font-weight: 600;
+            }
+            h2{
+                font-size: 12px;
+                font-weight: 900;
+            }
+        }
+    }
+    section.two{
+        button{
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 1rem;
+            background:linear-gradient(rgb(128, 126, 126), black);
+            color: black;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        button:hover{
+            scale: 1.1;
+        }
+    }
 }
